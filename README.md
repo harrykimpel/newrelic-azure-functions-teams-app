@@ -13,6 +13,7 @@ To customize the function you need to speficy a couple of Azure Functions Applic
 4. **IS_REFRESH_PAGE**: an indicator on whether you want to refresh (true) the dashboard within the Microsoft Teams app or not (false)
 
 ## Microsoft Teams App
-To configure the Microsoft Teams App, the easiest way to achieve this is by using the files in the **NewRelicTeamsApp** folder. You need to customize the staticTabs part of the manifest.json and enter the appropriate contentUrl from the Azure Function.
+To configure the Microsoft Teams App, the easiest way to achieve this is by using the files in the [**NewRelicTeamsApp**](NewRelicTeamsApp) folder. You need to customize the staticTabs part of the [manifest.json](NewRelicTeamsApp/manifest.json) and enter the appropriate contentUrl from the Azure Function.
 
+## Screenshot
 ![GitHub Logo](newrelic-ms-teams-apps.png)
