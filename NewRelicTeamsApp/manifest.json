@@ -1,0 +1,52 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.8/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.8",
+    "version": "1.0.0",
+    "id": "1ba7f7c8-d3ed-4cb2-99a8-86a4801efd80",
+    "packageName": "newrelicteams",
+    "developer": {
+        "name": "Harry Kimpel",
+        "websiteUrl": "https://www.newrelic.com",
+        "privacyUrl": "https://www.newrelic.com",
+        "termsOfUseUrl": "https://www.newrelic.com"
+    },
+    "icons": {
+        "color": "color.png",
+        "outline": "outline.png"
+    },
+    "name": {
+        "short": "New Relic Teams App",
+        "full": "New Relic Teams App"
+    },
+    "description": {
+        "short": "New Relic Teams App",
+        "full": "New Relic Teams App"
+    },
+    "accentColor": "#008C99",
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://newrelic-teams-2.azurewebsites.net/config.html",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team"
+            ]
+        }
+    ],
+    "staticTabs": [
+        {
+            "entityId": "2000",
+            "name": "New Relic Teams",
+            "contentUrl": "https://newrelic-teams-2.azurewebsites.net/api/HttpTrigger1",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "newrelic-teams-2.azurewebsites.net"
+    ]
+}
