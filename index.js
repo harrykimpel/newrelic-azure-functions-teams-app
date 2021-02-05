@@ -50,9 +50,8 @@ module.exports = function (context, req) {
                     </head>
                     <body>
                         <span class="display-name">Microsoft Teams User: </span><span id="user" class="display-name"></span>
-                        <div id="id01">#CHUNK#</div>
                         <script>
-                                    microsoftTeams.initialize();
+                            microsoftTeams.initialize();
                             microsoftTeams.getContext((context) => {
                                 let userId = document.getElementById('user');
                                 userId.innerHTML = context.userPrincipalName;
@@ -62,8 +61,12 @@ module.exports = function (context, req) {
                             }
                             `+ refreshPageCode + `
                         </script>
-                        #NEWRELIC#
-                        <input type="button" name="Button" value="Refresh" onclick="onRefresh()">
+                        <div>
+                            #NEWRELIC#
+                        </div>
+                        <div>
+                            <input type="button" name="Button" value="Refresh" onclick="onRefresh()">
+                        </div>
                     </body>
                 </html>`;
     var chunk = '';
@@ -76,9 +79,6 @@ module.exports = function (context, req) {
         });
 
         res.on('end', (d) => {
-            //content = content.replace('#CHUNK#', chunk);
-            content = content.replace('#CHUNK#', '');
-
             var json = JSON.parse(chunk);
             var imgUrl = json.data.dashboardCreateSnapshotUrl;
             imgUrl = imgUrl.replace('?format=PDF', '?format=PNG');
@@ -102,7 +102,7 @@ module.exports = function (context, req) {
     myReq.on('error', function (e) {
         context.log('problem with request: ' + e.message);
 
-        content = content.replace('#CHUNK#', 'An error occured: ' + e.message);
+        content = content.replace('#NEWRELIC#', 'An error occured: ' + e.message);
 
         context.res = {
             status: 200,
