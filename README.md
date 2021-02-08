@@ -1,4 +1,4 @@
-# New Relic Teams App
+# New Relic Microsoft Teams App
 This Microsoft Teams app consists of two components:
 1. An Azure Function that basically delivers a custom web app with an HTTP trigger
 2. The Microsoft Teams specification that can be configured using the built-in App Studio
