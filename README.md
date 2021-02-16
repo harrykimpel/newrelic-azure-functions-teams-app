@@ -3,7 +3,7 @@ This Microsoft Teams app consists of two components:
 1. An Azure Function that basically delivers a custom web app with an HTTP trigger
 2. The Microsoft Teams specification that can be configured using the built-in App Studio
 
-In general, this code could also live anywhere else. It does not need to be an Azure Function. This code could also be deployed to any local webserver that is available for the Microsoft Teams users.
+In general, this code could also live anywhere else. It does not need to be an Azure Function. This code could also be deployed to any local web server that is available for the Microsoft Teams users.
 
 ## Azure Function
 The Azure Function can be created without any specific requirements to keep in mind. You can simply create a Function App and add a HTTP triggered function. The code used here is based on Node.js,m but you can actually also adopt it to any other language of your choice. 
