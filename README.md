@@ -18,7 +18,7 @@ The Azure Function then leverages [New Relic's NerdGraph](https://docs.newrelic.
 
 ## Microsoft Teams App
 To configure the Microsoft Teams App, the easiest way to achieve this is by using the files in the [**NewRelicTeamsApp**](NewRelicTeamsApp) folder. You need to customize the staticTabs part of the [manifest.json](NewRelicTeamsApp/manifest.json) and enter the appropriate contentUrl from the Azure Function.
-You can then zip the entire NewRelicTeamsApp folder and import into. ![App Studio](app-studio.png)
+You can then zip the entire NewRelicTeamsApp folder and import into App Studio. ![App Studio](app-studio.png)
 
 ## Screenshot
 ![New Relic Teams App](newrelic-ms-teams-apps.png)
